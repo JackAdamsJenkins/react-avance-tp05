@@ -3,6 +3,7 @@ import { useUsers } from "./hooks/useUsers";
 import Header from "./components/Header";
 import UserForm from "./components/UserForm";
 import UserList from "./components/UserList";
+import ActivityChart from "./components/ActivityChart";
 
 export default function App(){
   const [isFormOpen, setIsFormOpen] = useState(false)
@@ -26,6 +27,7 @@ export default function App(){
             {isFormOpen && (
               <UserForm onSubmit={addUser} onClose={() => setIsFormOpen(false)} />
             )}
+            <ActivityChart />
           </div>
 
           <div className="lg:col-span-5">
